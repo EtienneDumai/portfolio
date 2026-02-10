@@ -8,6 +8,7 @@ export interface Project {
     type: "Scolaire" | "Professionel" | "Personnel";
     stack?: string[];
     roles: string[];
+    imageUrl?: string;
     lienGithub?: string;
     lienDemo?: string;
 }
@@ -54,8 +55,9 @@ export const Projects: Project[] = [
         date_debut: new Date("2025-09-01"),
         status: "En cours",
         type: "Scolaire",
-        stack: ["Angular","TypeScript", "Laravel", "PHP","PostgreSQL", "Docker", "Jasmine", "PHPUnit",]
-        roles: ["Analyste", "Concepteur", "Développeur", "Scrum master"]
+        stack: ["Angular","TypeScript", "Laravel", "PHP","PostgreSQL", "Docker", "Jasmine", "PHPUnit",],
+        roles: ["Analyste", "Concepteur", "Développeur", "Scrum master"],
+        imageUrl: "",
     },
     {
         id: 2,

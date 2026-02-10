@@ -1,6 +1,9 @@
-import { Routes } from '@angular/router';
-import { routes } from './app.routes';
+import { RenderMode, ServerRoute } from '@angular/ssr';
 
-export const serverRoutes: Routes = [
-  ...routes
+export const serverRoutes: ServerRoute[] = [
+  {
+    path: '**',
+    renderMode: RenderMode.Prerender, // portfolio => SSG
+  },
 ];
+
