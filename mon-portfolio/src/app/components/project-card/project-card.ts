@@ -1,11 +1,30 @@
-import { Component } from '@angular/core';
+import { DatePipe } from '@angular/common';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, Input, OnInit } from '@angular/core';
+import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
 
 @Component({
   selector: 'app-project-card',
-  imports: [],
+  standalone:true,
+  imports: [CardModule, ButtonModule, DatePipe],
   templateUrl: './project-card.html',
   styleUrl: './project-card.css',
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
-export class ProjectCard {
+export class ProjectCard implements OnInit{
+  @Input() id !:number;
+  @Input() nom !: string;
+  @Input() description!:string;
+  @Input() date_debut !: Date;
+  @Input() date_fin ?: Date;
+  @Input() status !: "En cours" | "Terminé";
+  @Input() type!: "Scolaire" | "Professionel" | "Personnel";
+  @Input() stack?: string[];
+  @Input() roles?: string[];
+  @Input() imageUrl?: string;
+  @Input()  lienGithub?: string;
+  @Input()  lienDemo?: string;
+  ngOnInit(): void {
 
+  }
 }

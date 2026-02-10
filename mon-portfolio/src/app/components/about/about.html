@@ -1,1 +1,43 @@
-<p>about works!</p>
+<section class="flex justify-content-center mt-6 px-3">
+  <p-card class="w-full lg:w-8 shadow-2">
+    <div class="grid align-items-center gap-4">
+      <!-- Avatar -->
+      <div class="col-12 md:col-4 flex justify-content-center">
+        <p-avatar image="assets/avatar.jpg" size="xlarge" shape="circle" class="shadow-3" />
+      </div>
+
+      <!-- Texte -->
+      <div class="col-12 md:col-8">
+        <h1 class="text-3xl font-bold mb-2">Étienne Dumai</h1>
+
+        <p class="text-lg text-600 mb-3">
+          Étudiant en BUT Informatique — développement web & logiciel
+        </p>
+
+        <p class="line-height-3 mb-4">
+          Je conçois des applications web modernes avec Angular et Laravel, en mettant l’accent sur
+          la qualité du code, les performances, une architecture propre et une automatisation des tâches. Intéressé par le
+          développement logiciel, les systèmes et le backend.
+        </p>
+
+        <!-- Skills rapides -->
+        <div class="flex flex-wrap gap-2 mb-4">
+          <p-tag value="Angular" severity="info" />
+          <p-tag value="TypeScript" severity="info" />
+          <p-tag value="Laravel" severity="success" />
+          <p-tag value="PostgreSQL" />
+          <p-tag value="Docker" />
+        </div>
+
+        <!-- Actions -->
+        <div class="flex flex-wrap gap-3">
+          <p-button label="GitHub" icon="pi pi-github" severity="secondary" outlined />
+
+          <p-button label="LinkedIn" icon="pi pi-linkedin" severity="info" outlined />
+
+          <p-button label="Télécharger CV" icon="pi pi-download" severity="primary" />
+        </div>
+      </div>
+    </div>
+  </p-card>
+</section>

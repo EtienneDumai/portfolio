@@ -1,1 +1,90 @@
-<p>project-card works!</p>
+<div class="mb-5 flex justify-content-center">
+  <p-card class="w-full md:w-25rem shadow-2">
+
+    <!-- Image -->
+    @if (imageUrl) {
+      <ng-template #header>
+        <img
+          [src]="imageUrl"
+          [alt]="nom"
+          class="w-full object-cover border-round-top"
+        />
+      </ng-template>
+    }
+
+    <!-- Titre -->
+    <ng-template #title>
+      {{ nom }}
+    </ng-template>
+
+    <!-- Dates -->
+    <ng-template #subtitle>
+      {{ date_debut | date:'yyyy' }}
+      -
+      @if (date_fin) {
+        {{ date_fin | date:'yyyy' }}
+      } @else {
+        Aujourd’hui
+      }
+    </ng-template>
+
+    <!-- Description -->
+    <p class="line-height-3 mb-3">
+      {{ description }}
+    </p>
+
+    <!-- Stack -->
+    @if (stack?.length) {
+      <div class="flex flex-wrap gap-2 mb-3">
+        @for (tech of stack; track tech) {
+          <p-tag [value]="tech" severity="info" />
+        }
+      </div>
+    }
+
+    <!-- Rôles -->
+    @if (roles?.length) {
+      <p class="text-600 text-sm mb-3">
+        Rôle :
+        <span class="font-medium">
+          {{ this.roles?.join(', ') }}
+        </span>
+      </p>
+    }
+
+    <!-- Footer -->
+    <ng-template #footer>
+  <div class="flex gap-3">
+
+    @if (lienGithub) {
+      <a
+        pButton
+        class="w-full"
+        [href]="lienGithub"
+        target="_blank"
+        rel="noopener noreferrer"
+        icon="pi pi-github"
+        label="GitHub"
+        severity="secondary"
+        [outlined]="true"
+      ></a>
+    }
+
+    @if (lienDemo) {
+      <a
+        pButton
+        class="w-full"
+        [href]="lienDemo"
+        target="_blank"
+        rel="noopener noreferrer"
+        icon="pi pi-external-link"
+        label="Démo"
+        severity="primary"
+      ></a>
+    }
+
+  </div>
+</ng-template>
+
+  </p-card>
+</div>
