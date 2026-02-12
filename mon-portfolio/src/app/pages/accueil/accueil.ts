@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { About } from "../../components/about/about";
+import { ProjectComponent } from '../../components/project/project';
 
 @Component({
   selector: 'app-accueil',
-  imports: [About],
+  standalone:true,
+  imports: [About, ProjectComponent],
   templateUrl: './accueil.html',
   styleUrl: './accueil.css',
 })
