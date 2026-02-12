@@ -83,5 +83,17 @@ export const Projects: Project[] = [
         roles: ["Développeur"],
         lienGithub : "https://github.com/EtienneDumai/S2.02",
     },
-
+    {
+        id: 3,
+        nom: "Nuit De l'Info 2025",
+        description: "La Nuit De l'Info est un evenement national visant à developper une application web en une nuit sur un thème donné. Cette année le thème était Numérique Inclusif Responsable et Durable. Le but était de démontrer qu'il était possible de se passer des GAFAM avec des solutions libre de droits.",
+        date_debut: new Date("2025-12-04"),
+        date_fin: new Date("2025-12-05"),
+        status: "Terminé",
+        type: "Personnel",
+        stack:["Laravel, PHP, TailwindCSS"],
+        roles: ["Développeur", "DevOps"],
+        lienGithub : "https://github.com/NDI-2025/NDI-2025",
+        lienDemo: "https://impslicks.alwaysdata.net"
+    },
 ];
