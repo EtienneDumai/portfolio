@@ -14,6 +14,7 @@ export interface Project {
 }
 
 export interface Skills {
+    id:number;
     nom: string;
     icon: string;
     niveau: number;
@@ -86,7 +87,7 @@ export const Projects: Project[] = [
     {
         id: 3,
         nom: "Nuit De l'Info 2025",
-        description: "La Nuit De l'Info est un evenement national visant à developper une application web en une nuit sur un thème donné. Cette année le thème était Numérique Inclusif Responsable et Durable. Le but était de démontrer qu'il était possible de se passer des GAFAM avec des solutions libre de droits.",
+        description: "La Nuit De l'Info est un evenement national visant à developper une application web en une nuit sur un thème donné. Cette année le thème était Numérique Inclusif Responsable et Durable. Le but était de démontrer qu'il était possible de se passer des GAFAM avec des solutions libre de droits tout en réalisant certains défis technique ou non.",
         date_debut: new Date("2025-12-04"),
         date_fin: new Date("2025-12-05"),
         status: "Terminé",
@@ -97,3 +98,131 @@ export const Projects: Project[] = [
         lienDemo: "https://impslicks.alwaysdata.net"
     },
 ];
+export const SkillsPerso : Skills[] = [
+    {
+        id:1,
+        icon:"test",
+        nom : "Angular",
+        niveau : 4,
+        category : "Frontend"
+    },
+    {
+        id:2,
+        icon:"test",
+        nom : "TailwindCSS",
+        niveau : 3,
+        category : "Frontend"
+    },
+    {
+        id:3,
+        icon:"test",
+        nom : "HTML 5",
+        niveau : 4,
+        category : "Frontend"
+    },
+    {
+        id:4,
+        icon:"test",
+        nom : "CSS",
+        niveau : 3,
+        category : "Frontend"
+    },
+    {
+        id:5,
+        icon:"test",
+        nom : "Laravel",
+        niveau : 4,
+        category : "Backend"
+    },
+    {
+        id:6,
+        icon:"test",
+        nom : "C++",
+        niveau : 4,
+        category : "Systèmes / Bas niveau"
+    },
+    {
+        id:7,
+        icon:"test",
+        nom : "C",
+        niveau : 3,
+        category : "Système / Bas niveau"
+    },
+    {
+        id:7,
+        icon:"test",
+        nom : "Arch Linux",
+        niveau : 3,
+        category : "Système / Bas niveau"
+    },
+    {
+        id:8,
+        icon:"test",
+        nom : "Python",
+        niveau : 4,
+        category : "Données"
+    },
+    {
+        id:9,
+        icon:"test",
+        nom : "MySQL",
+        niveau : 4,
+        category : "Données"
+    },
+    {
+        id:10,
+        icon:"test",
+        nom : "PostgreSQL",
+        niveau : 4,
+        category : "Données"
+    },
+    {
+        id:11,
+        icon:"test",
+        nom : "MongoDB",
+        niveau : 3,
+        category : "Données"
+    },
+    {
+        id:12,
+        icon:"test",
+        nom : "Git",
+        niveau : 4,
+        category : "DevOps / Outils"
+    },
+    {
+        id:13,
+        icon:"test",
+        nom : "Docker",
+        niveau : 3,
+        category : "DevOps / Outils"
+    },
+    {
+        id:14,
+        icon:"test",
+        nom : "Docker Compose",
+        niveau : 3,
+        category : "DevOps / Outils"
+    },
+    {
+        id:15,
+        icon:"test",
+        nom : "GitHub Actions",
+        niveau : 3,
+        category : "DevOps / Outils"
+    },
+    {
+        id:16,
+        icon:"test",
+        nom : "CI/CD",
+        niveau : 3,
+        category : "DevOps / Outils"
+    },
+    {
+        id:17,
+        icon:"test",
+        nom : "Scripting",
+        niveau : 4,
+        category : "DevOps / Outils"
+    },
+]
