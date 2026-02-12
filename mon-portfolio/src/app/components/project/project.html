@@ -1,1 +1,18 @@
-<p>project works!</p>
+@if (this.listProjet.length !== 0) {
+    @for (projet of this.listProjet; track projet.id) {
+        <app-project-card 
+        [id]="projet.id"
+        [nom]="projet.nom"
+        [description]="projet.description"
+        [date_debut]="projet.date_debut"
+        [date_fin]="projet.date_fin"
+        [status]="projet.status"
+        [type]="projet.type"
+        [stack]="projet.stack"
+        [roles]="projet.roles"
+        [imageUrl]="projet.imageUrl"
+        [lienGithub]="projet.lienGithub"
+        [lienDemo]="projet.lienDemo"
+        />
+    }
+}
