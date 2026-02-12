@@ -14,7 +14,7 @@ export interface Project {
 }
 
 export interface Skills {
-    id:number;
+    id: number;
     nom: string;
     icon: string;
     niveau: number;
@@ -44,6 +44,7 @@ export interface Formation {
     date_debut: Date;
     date_fin: Date;
     nom: string;
+    etablissement: string;
     lieu: string;
     pays: string;
 }
@@ -56,7 +57,7 @@ export const Projects: Project[] = [
         date_debut: new Date("2025-09-01"),
         status: "En cours",
         type: "Scolaire",
-        stack: ["Angular","TypeScript", "Laravel", "PHP","PostgreSQL", "Docker", "Jasmine", "PHPUnit",],
+        stack: ["Angular", "TypeScript", "Laravel", "PHP", "PostgreSQL", "Docker", "Jasmine", "PHPUnit",],
         roles: ["Analyste", "Concepteur", "Développeur", "Scrum master"],
         imageUrl: "",
     },
@@ -80,9 +81,9 @@ export const Projects: Project[] = [
         date_fin: new Date("2024-05-29"),
         status: "Terminé",
         type: "Scolaire",
-        stack:["Python"],
+        stack: ["Python"],
         roles: ["Développeur"],
-        lienGithub : "https://github.com/EtienneDumai/S2.02",
+        lienGithub: "https://github.com/EtienneDumai/S2.02",
     },
     {
         id: 3,
@@ -92,137 +93,160 @@ export const Projects: Project[] = [
         date_fin: new Date("2025-12-05"),
         status: "Terminé",
         type: "Personnel",
-        stack:["Laravel, PHP, TailwindCSS"],
+        stack: ["Laravel, PHP, TailwindCSS"],
         roles: ["Développeur", "DevOps"],
-        lienGithub : "https://github.com/NDI-2025/NDI-2025",
+        lienGithub: "https://github.com/NDI-2025/NDI-2025",
         lienDemo: "https://impslicks.alwaysdata.net"
     },
 ];
-export const SkillsPerso : Skills[] = [
+export const SkillsPerso: Skills[] = [
     {
-        id:1,
-        icon:"test",
-        nom : "Angular",
-        niveau : 4,
-        category : "Frontend"
+        id: 1,
+        icon: "test",
+        nom: "Angular",
+        niveau: 4,
+        category: "Frontend"
     },
     {
-        id:2,
-        icon:"test",
-        nom : "TailwindCSS",
-        niveau : 3,
-        category : "Frontend"
+        id: 2,
+        icon: "test",
+        nom: "TailwindCSS",
+        niveau: 3,
+        category: "Frontend"
     },
     {
-        id:3,
-        icon:"test",
-        nom : "HTML 5",
-        niveau : 4,
-        category : "Frontend"
+        id: 3,
+        icon: "test",
+        nom: "HTML 5",
+        niveau: 4,
+        category: "Frontend"
     },
     {
-        id:4,
-        icon:"test",
-        nom : "CSS",
-        niveau : 3,
-        category : "Frontend"
+        id: 4,
+        icon: "test",
+        nom: "CSS",
+        niveau: 3,
+        category: "Frontend"
     },
     {
-        id:5,
-        icon:"test",
-        nom : "Laravel",
-        niveau : 4,
-        category : "Backend"
+        id: 5,
+        icon: "test",
+        nom: "Laravel",
+        niveau: 4,
+        category: "Backend"
     },
     {
-        id:6,
-        icon:"test",
-        nom : "C++",
-        niveau : 4,
-        category : "Systèmes / Bas niveau"
+        id: 6,
+        icon: "test",
+        nom: "C++",
+        niveau: 4,
+        category: "Systèmes / Bas niveau"
     },
     {
-        id:7,
-        icon:"test",
-        nom : "C",
-        niveau : 3,
-        category : "Système / Bas niveau"
+        id: 7,
+        icon: "test",
+        nom: "C",
+        niveau: 3,
+        category: "Système / Bas niveau"
     },
     {
-        id:7,
-        icon:"test",
-        nom : "Arch Linux",
-        niveau : 3,
-        category : "Système / Bas niveau"
+        id: 7,
+        icon: "test",
+        nom: "Arch Linux",
+        niveau: 3,
+        category: "Système / Bas niveau"
     },
     {
-        id:8,
-        icon:"test",
-        nom : "Python",
-        niveau : 4,
-        category : "Données"
+        id: 8,
+        icon: "test",
+        nom: "Python",
+        niveau: 4,
+        category: "Données"
     },
     {
-        id:9,
-        icon:"test",
-        nom : "MySQL",
-        niveau : 4,
-        category : "Données"
+        id: 9,
+        icon: "test",
+        nom: "MySQL",
+        niveau: 4,
+        category: "Données"
     },
     {
-        id:10,
-        icon:"test",
-        nom : "PostgreSQL",
-        niveau : 4,
-        category : "Données"
+        id: 10,
+        icon: "test",
+        nom: "PostgreSQL",
+        niveau: 4,
+        category: "Données"
     },
     {
-        id:11,
-        icon:"test",
-        nom : "MongoDB",
-        niveau : 3,
-        category : "Données"
+        id: 11,
+        icon: "test",
+        nom: "MongoDB",
+        niveau: 3,
+        category: "Données"
     },
     {
-        id:12,
-        icon:"test",
-        nom : "Git",
-        niveau : 4,
-        category : "DevOps / Outils"
+        id: 12,
+        icon: "test",
+        nom: "Git",
+        niveau: 4,
+        category: "DevOps / Outils"
     },
     {
-        id:13,
-        icon:"test",
-        nom : "Docker",
-        niveau : 3,
-        category : "DevOps / Outils"
+        id: 13,
+        icon: "test",
+        nom: "Docker",
+        niveau: 3,
+        category: "DevOps / Outils"
     },
     {
-        id:14,
-        icon:"test",
-        nom : "Docker Compose",
-        niveau : 3,
-        category : "DevOps / Outils"
+        id: 14,
+        icon: "test",
+        nom: "Docker Compose",
+        niveau: 3,
+        category: "DevOps / Outils"
     },
     {
-        id:15,
-        icon:"test",
-        nom : "GitHub Actions",
-        niveau : 3,
-        category : "DevOps / Outils"
+        id: 15,
+        icon: "test",
+        nom: "GitHub Actions",
+        niveau: 3,
+        category: "DevOps / Outils"
     },
     {
-        id:16,
-        icon:"test",
-        nom : "CI/CD",
-        niveau : 3,
-        category : "DevOps / Outils"
+        id: 16,
+        icon: "test",
+        nom: "CI/CD",
+        niveau: 3,
+        category: "DevOps / Outils"
     },
     {
-        id:17,
-        icon:"test",
-        nom : "Scripting",
-        niveau : 4,
-        category : "DevOps / Outils"
+        id: 17,
+        icon: "test",
+        nom: "Scripting",
+        niveau: 4,
+        category: "DevOps / Outils"
     },
 ]
+export const Formations: Formation[] = [
+    {
+        idFormation: 1,
+        date_debut: new Date("2023-09-01"),
+        date_fin: new Date("2026-07-01"),
+        nom: "BUT Informatique",
+        etablissement: "IUT de Bayonne et du Pays Basque",
+        lieu: "Anglet",
+        pays: "France",
+    },
+    {
+        idFormation: 2,
+        date_debut: new Date("2020-09-01"),
+        date_fin: new Date("2023-07-01"),
+        nom: "Baccalauréat spécialité Mathématique, Physique-Chimie, Numérique et Science de l'Informatique",
+        etablissement:"Lycée André Malraux",
+        lieu: "Biarritz",
+        pays: "France",
+    },
+]
+
+
+
