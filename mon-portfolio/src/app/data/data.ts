@@ -63,7 +63,7 @@ export const Projects: Project[] = [
     },
     {
         id: 2,
-        nom: "Bibliothèque de jeu vidéo",
+        nom: "Bibliothèque de jeux vidéo",
         description: "Lors de la fin du cours sur le framework Angular il nous été demandé de faire une application web pour gérer des jeux vidéos.",
         date_debut: new Date("2025-03-25"),
         date_fin: new Date("2025-04-05"),
@@ -75,7 +75,7 @@ export const Projects: Project[] = [
     },
     {
         id: 3,
-        nom: "Représentation d'algorithme de plus cours chemin",
+        nom: "Représentation d'algorithme de plus court chemin",
         description: "Lors de la première année pour un projet de fin de semestre il nous été demandé de coder des algorithmes de plus court chemin en prenant comme données les rues de la ville de Bayonne et de faire une représentation graphique pour les visualiser.",
         date_debut: new Date("2024-04-08"),
         date_fin: new Date("2024-05-29"),
@@ -88,7 +88,7 @@ export const Projects: Project[] = [
     {
         id: 3,
         nom: "Nuit De l'Info 2025",
-        description: "La Nuit De l'Info est un evenement national visant à developper une application web en une nuit sur un thème donné. Cette année le thème était Numérique Inclusif Responsable et Durable. Le but était de démontrer qu'il était possible de se passer des GAFAM avec des solutions libre de droits tout en réalisant certains défis technique ou non.",
+        description: "La Nuit De l'Info est un événement national visant à developper une application web en une nuit sur un thème donné. Cette année le thème était Numérique Inclusif Responsable et Durable. Le but était de démontrer qu'il était possible de se passer des GAFAM avec des solutions libre de droits tout en réalisant certains défis technique ou non.",
         date_debut: new Date("2025-12-04"),
         date_fin: new Date("2025-12-05"),
         status: "Terminé",
