@@ -2,6 +2,7 @@ import { DatePipe } from '@angular/common';
 import { Component, CUSTOM_ELEMENTS_SCHEMA, Input, OnInit } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
+import { Technology } from '../../data/data';
 
 @Component({
   selector: 'app-project-card',
@@ -19,7 +20,7 @@ export class ProjectCard implements OnInit{
   @Input() date_fin ?: Date;
   @Input() status !: "En cours" | "Terminé";
   @Input() type!: "Scolaire" | "Professionel" | "Personnel";
-  @Input() stack?: string[];
+  @Input() stack?: Technology[];
   @Input() roles?: string[];
   @Input() imageUrl?: string;
   @Input()  lienGithub?: string;

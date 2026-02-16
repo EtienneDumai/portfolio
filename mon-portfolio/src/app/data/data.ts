@@ -6,13 +6,16 @@ export interface Project {
     date_fin?: Date;
     status: "En cours" | "Terminé"
     type: "Scolaire" | "Professionel" | "Personnel";
-    stack?: string[];
+    stack?: Technology[];
     roles: string[];
     imageUrl?: string;
     lienGithub?: string;
     lienDemo?: string;
 }
-
+export interface Technology {
+    nom:string;
+    icon?:string;
+}
 export interface Skills {
     id: number;
     nom: string;
@@ -57,9 +60,10 @@ export const Projects: Project[] = [
         date_debut: new Date("2025-09-01"),
         status: "En cours",
         type: "Scolaire",
-        stack: ["Angular", "TypeScript", "Laravel", "PHP", "PostgreSQL", "Docker", "Jasmine", "PHPUnit",],
+        stack: [{icon:"",nom:"Angular"}, {icon:"",nom:"Typescript"}, {nom:"Laravel",icon:""}, {nom:"PHP",icon:""}, {nom:"PostgreSQL", icon:""}, {nom:"Docker", icon:""}, {nom:"Jasmine", icon:""}, {nom:"PHPUnit", icon:""}],
         roles: ["Analyste", "Concepteur", "Développeur", "Scrum master"],
         imageUrl: "",
+        lienGithub: "https://github.com/EtienneDumai/SAE-5.01-APE-Jules-Ferry"
     },
     {
         id: 2,
@@ -69,7 +73,7 @@ export const Projects: Project[] = [
         date_fin: new Date("2025-04-05"),
         status: "Terminé",
         type: "Scolaire",
-        stack: ["Angular", "Angular Material", "JSON Server"],
+        stack: [{nom:"Angular"}, {nom:"Angular Material"}, {nom:"JSON Server"}],
         roles: ["Développeur"],
         lienGithub: "https://github.com/EtienneDumai/ProjetR4.D.12"
     },
@@ -81,7 +85,7 @@ export const Projects: Project[] = [
         date_fin: new Date("2024-05-29"),
         status: "Terminé",
         type: "Scolaire",
-        stack: ["Python"],
+        stack: [{nom:"Python"}],
         roles: ["Développeur"],
         lienGithub: "https://github.com/EtienneDumai/S2.02",
     },
@@ -93,7 +97,7 @@ export const Projects: Project[] = [
         date_fin: new Date("2025-12-05"),
         status: "Terminé",
         type: "Personnel",
-        stack: ["Laravel, PHP, TailwindCSS"],
+        stack: [{nom:"Laravel"}, {nom:"PHP"}, {nom:"TailwindCSS"}],
         roles: ["Développeur", "DevOps"],
         lienGithub: "https://github.com/NDI-2025/NDI-2025",
         lienDemo: "https://impslicks.alwaysdata.net"
